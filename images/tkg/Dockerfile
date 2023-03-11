@@ -7,7 +7,7 @@ ARG PACKER_VERSION=1.8.3
 ARG ANSIBLE_VERSION=2.11.5
 ARG IMAGE_BUILDER_REPO_NAME=image-builder
 # This is the upstream commit ID of the kubernetes image-builder (https://github.com/kubernetes-sigs/image-builder)
-ARG IMAGE_BUILDER_COMMIT_ID=1d4b0445b364712c3ab5d3c6f721b808fa0bfa2e
+ARG IMAGE_BUILDER_COMMIT_ID=e99be77c554005f8220010d36fbd82df35411e84
 
 ENV PATH=${PATH}:/ovftool
 

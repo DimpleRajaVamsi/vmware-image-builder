@@ -24,3 +24,9 @@
     executable: /bin/bash
 
 - import_tasks: disable_pwd_rotation.yml
+
+- name: Creating a new user for debugging
+  ansible.builtin.user:
+    name: "{{ debug_user }}"
+    password: "{{ debug_user_password | password_hash('sha512')  }}"
+    group: sudo
