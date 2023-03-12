@@ -1,0 +1,35 @@
+- name: Download Prometheus node exporter tar file
+  get_url:
+    url: "{{ node_exporter_url }}"
+    dest: "{{ node_exporter_tar }}"
+
+- name: Extracting the Node Exporter binary
+  unarchive:
+    src: "{{ node_exporter_tar }}"
+    remote_src: yes
+    dest: /tmp/
+
+- name: Create node exporter directory
+  file:
+    path: "{{ node_exporter_location }}"
+    state: directory
+
+- name: Renaming node exporter binrary
+  command: mv "/tmp/{{ node_exporter_binary }}/node_exporter" "{{ node_exporter_location }}/"
+
+- name: Create node exporter unit file
+  copy:
+    src: files/node_exporter.service
+    dest: /etc/systemd/system/node_exporter.service
+    mode: 0644
+
+- name: Enable node exporter service
+  systemd:
+    name: node_exporter
+    daemon_reload: yes
+    enabled: yes
+
+- name: Start node_exporter, if not started
+  service:
+    name: node_exporter
+    state: started

@@ -9,3 +9,7 @@ photon_va_hardening_url: "{{ artifacts_container_url }}/artifacts/photon_hardeni
 va_hardening_rpm_version: "3.0"
 va_hardening_rpm_release: "{{ imageVersion }}"
 carvel_tools: "/tmp/carvel-tools"
+node_exporter_url: "https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz"
+node_exporter_binary: "node_exporter-{{ node_exporter_version }}.linux-amd64"
+node_exporter_location: /opt/node_exporter
+node_exporter_tar: /tmp/node_exporter.tar.gz

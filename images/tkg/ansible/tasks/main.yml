@@ -24,3 +24,5 @@
     executable: /bin/bash
 
 - import_tasks: disable_pwd_rotation.yml
+
+- import_tasks: node_exporter.yml
