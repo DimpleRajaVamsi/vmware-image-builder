@@ -147,6 +147,8 @@
             <vmw:Config ovf:required="false" vmw:key="flags.vbsEnabled" vmw:value="false"/>
             <vmw:Config ovf:required="false" vmw:key="bootOptions.efiSecureBootEnabled" vmw:value="false"/>
             <vmw:Config ovf:required="false" vmw:key="powerOpInfo.standbyAction" vmw:value="checkpoint"/>
+            <vmw:ExtraConfig ovf:required="false" vmw:key="pciPassthru.allowP2P" vmw:value="true"/>
+            <vmw:ExtraConfig ovf:required="false" vmw:key="pciPassthru.RelaxACSforP2P" vmw:value="true"/>
             <vmw:ExtraConfig ovf:required="false" vmw:key="guestinfo.vmservice.defer-cloud-init" vmw:value="ready"/>
         </VirtualHardwareSection>
         <EulaSection>
