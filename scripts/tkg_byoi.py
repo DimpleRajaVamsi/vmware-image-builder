@@ -23,7 +23,7 @@ package_api_kind = "Package"
 osimage_name_format = "{}-{}-{}-{}-{}"
 tkr_name_format = "{}-{}"
 max_k8s_object_name_length = 63
-max_tkr_suffix_length = 8
+max_tkr_suffix_length = 9
 
 
 def parse_args():
@@ -319,8 +319,8 @@ def format_name(template, suffix, *default_values):
     Creates a kubernetes object name with max name length(63) after
     appending the suffix string.
     """
+    global max_tkr_suffix_length
     max_k8s_object_name_length = 63
-    max_tkr_suffix_length = 8
     suffix = suffix[0:max_tkr_suffix_length]
     default_template_length = len(template.replace('{}', ''))
     total_length = default_template_length

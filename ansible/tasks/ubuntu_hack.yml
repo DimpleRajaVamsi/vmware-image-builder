@@ -47,6 +47,7 @@
     src: /etc/machine-id
     dest: /var/lib/dbus/machine-id
     state: link
+    force: true
 
 - name: Clean up added directories and files
   file:

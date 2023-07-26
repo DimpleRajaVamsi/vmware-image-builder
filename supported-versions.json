@@ -1,9 +1,9 @@
 {
     "v1.24.9+vmware.1" : {
-        "supported_os": ["photon-3", "ubuntu-2004-efi"],
-        "artifacts_image": "projects.registry.vmware.com/tkg/tkg-vsphere-linux-resource-bundle:v1.24.9_vmware.1-tkg.1",
+        "supported_os": ["photon-3", "ubuntu-2204-efi"],
+        "artifacts_image": "projects-stg.registry.vmware.com/tkg/tkg-vsphere-linux-resource-bundle:v1.24.9_vmware.1-tkg.5",
         "extra_params": {
-            "image_builder_commit": "1d4b0445b364712c3ab5d3c6f721b808fa0bfa2e"
+            "image_builder_commit": "71a700b30c8e110245128261a79303e2edc39026"
         }
     },
     "v1.25.7+vmware.3" : {

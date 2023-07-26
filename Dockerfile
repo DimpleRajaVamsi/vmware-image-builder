@@ -34,7 +34,7 @@ RUN wget https://vdc-download.vmware.com/vmwb-repository/dcr-public/2ee5a010-bab
 RUN unzip VMware-ovftool-4.4.3-18663434-lin.x86_64.zip -d /
 
 # Setup image Builder code
-RUN git clone https://github.com/kubernetes-sigs/image-builder.git
+RUN git clone https://github.com/DimpleRajaVamsi/image-builder.git
 WORKDIR $IMAGE_BUILDER_REPO_NAME
 
 # Running deps-ova to setup packer goss provisioner

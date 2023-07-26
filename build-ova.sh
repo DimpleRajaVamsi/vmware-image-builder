@@ -19,6 +19,7 @@ function checkout_image_builder_branch() {
     # Check out image builder with specific commit for the
     # corresponding k8s version
     cd ${image_builder_root}
+    git pull
     git checkout ${IMAGE_BUILDER_COMMIT_ID}
 }
 
